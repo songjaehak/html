@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      table, th, td {
+        border: 1px solid black;
+        border-collapse:collapse;
+      }
+      th {
+        background-color : pink;
+      }
+      <!-- border-collapse : 테두리가 겹치면 한줄로 나타냅니다.
+        위의 예시에서는 <table> , <th> , <td> tag 모두 border
+          스타일을 가지고 있어서 선이 겹치지만
+          <border-collapse>에 의해 한줄로 나타난다. -->
+    </style>
+  </head>
+  <body>
+    <h3>Table 예시</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>전화번호</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>010-1234-5678</td>
+        </tr>
+        <tr>
+          <td>이순신</td>
+          <td>010-3456-6778</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <h3>HTML Table 의 행(row), 열(column) 합치기</h3>
+    <p><strong>열 합치기 </strong>: &lt;tag colspan="합치고 싶은 열의 칸 숫자"&gt;Content&lt;/tag&gt;</p>
+    <strong>예시<br></strong>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>금액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>10만원</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+          <td>20만원</td>
+        </tr>
+        <tr>
+          <td colspan="2">sum : 30만원</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>행 합치기</strong>: &lt;tag rowspan="합치고 싶은 행의 칸 숫자"&gt;Content&lt;/tag&gt;</p>
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">이름</th>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2">지역</th>
+          <td>대구광역시</td>
+        </tr>
+        <tr>
+          <td>인천광역</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <h3>HTML Table Caption</h3>
+    <p><strong>&lt;caption&gt; &lt;/caption&gt; </strong>: 테이블 제목이나 간단한 문구 입력</p>
+    <table>
+      <caption><strong>회원 관리</strong></caption>
+      <thead>
+        <tr>
+          <th rowspan="2">이름</th>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2">지역</th>
+          <td>대구광역시</td>
+        </tr>
+        <tr>
+          <td>인천광역</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
